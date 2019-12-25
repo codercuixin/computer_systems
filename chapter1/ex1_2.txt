@@ -1,0 +1,3 @@
+Tnew = (1-a)Told + aTold/k
+S = Told/Tnew = 1/(1-a +a/k);
+又a=0.8， S=2, 则 k = 8/3
