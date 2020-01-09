@@ -1,0 +1,4 @@
+word srcB = [
+    icode in {IPOPQ, IMRMOVQ} : rA
+    1: RNONE;
+]

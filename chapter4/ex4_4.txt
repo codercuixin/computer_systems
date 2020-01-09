@@ -1,0 +1,22 @@
+long rsum(long *start, long count){
+    if(count <=0){
+        return 0;
+    }
+    return *start + rsum(start+1, count-1);
+}
+#start in %rdi, count in %rsi
+rsum:
+    xor  %rax, %rax #sum = 0
+    andq  %rsi, %rsi
+    jle .L9
+    irmovq $8, %r8 #Constant 8
+    irmovq $1, %r9 #Constant 1
+    pushq %rbx
+    mrmovq (%rdi), %rbx
+    addq %r8 %rdi
+    subq %rq %rsi
+    call rsum
+    addq %rbx %rax
+    popq %rbx
+.L9:
+    ret
