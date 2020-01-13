@@ -3,4 +3,4 @@ project(computer_systems C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(computer_systems  chapter3/ex3_42.c)
+add_executable(computer_systems  chapter5/chap5_3.c)
