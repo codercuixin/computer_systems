@@ -1,0 +1,10 @@
+ADDR(s)= ADDR(.text) = 0x4004d0
+refaddr = ADDR(s) +  r.offset = ox4004da
+*refptr = (unsigned )(ADDR(r.symbol)+ r.addend - refaddr);
+        = (unsigned )(ox4004e8 + (-4) - 0x4004da)
+        = 0xa
+
+0x4004e8-0xa-0x5 = 0x4004d9
+0x4004d9: e8 0a 00 00 00 callq 4004e8 <swap>
+PC相对引用的 值为0xa
+
