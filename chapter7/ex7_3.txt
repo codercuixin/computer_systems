@@ -1,0 +1,4 @@
+A: gcc -static -o prog p.o libx.a
+B: gcc -static -o prog p.o libx.a liby.a
+C: gcc -static -o prog p.o libx.a liby.a  libx.a p.o
+
