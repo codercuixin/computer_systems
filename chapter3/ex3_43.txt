@@ -1,0 +1,26 @@
+1.
+    short
+    从内存中加载数据，然后放入目标地址
+    movw 8(%rdi), %ax;  //取值放入ax
+    movw %ax, (%rsi);
+2.
+    char * 指定char v的指针
+    计算char v的地址，然后放入目标地址
+    movq 10(%rdi), %rax;  计算地址
+    movq %rax, (%rsi); 放入目标内存地址
+
+3.
+    int * ，指向int的地址
+    movq %rdi, (%rsi)
+
+4.
+    int, 获取数组置顶下标的值，放入目标地址
+    movq (%rdi), %rax; 计算下标
+    movl (%rdi, %rax, 4), %eax; 获取int值
+    movl %eax, (%rsi)
+
+5.
+   char 获取值
+   movq 8(%rdi) %rax; 获取指向char *的指针
+   movb (%rax), %al; 获取置顶地址处开始的一个字节的数据
+   movb %al, (%rsi)
